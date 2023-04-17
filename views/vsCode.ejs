@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="../stylesheets/style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="left">
+            <h3>Vs Code</h3>
+            <div class="nav">
+                <div class="file_Name">folder Name</div>
+                <div class="icons">
+                    <i id="fileCreate" class="ri-file-line"></i>
+                    <i id="folderCreate" class="ri-folder-line"></i>
+                    <i id="refresh" class="ri-refresh-line"></i>
+                </div>
+            </div>
+            <form id="form-file-c" action="/fileCreate" style="display: none;" method="post">
+                <input id="fileName_i" name="fileName" type="text" placeholder="file Name...">
+            </form>
+            <form id="form-folder-c" action="/folderCreate" style="display: none;" method="post">
+                <input id="folderName_i" name="folderName" type="text" placeholder="folder Name...">
+            </form>
+            <% files.forEach(function(file){ %>
+                <% if (file.isFolder == false) { %>
+                    <div class="file">
+                        <div class="name"><i class="ri-file-line"></i><%= file.fileName %></div>
+                        <div class="close"><i class="ri-close-line"></i></div>
+                    </div>
+                <% } else { %>
+                    <div class="folder">
+                        <div class="name"><i class="ri-folder-line"></i><%= file.fileName %></div>
+                        <div class="close"><i class="ri-arrow-drop-down-line"></i></div>
+                    </div>
+                <% } %>
+            <% }) %>
+        </div>
+    </div>
+    <script src="../javascripts/main.js"></script>
+</body>
+</html>
