@@ -41,4 +41,15 @@ router.post('/folderCreate', function (req, res) {
   });
 });
 
+router.get('/upload/:filename',function(req,res){
+  var filesDup = [];
+  fs.readdir('./upload', { withFileTypes: true }, function (err, files) {
+    files.forEach(function(file){
+      filesDup.push({fileName:file.name,isFolder:file.isDirectory()});
+    });
+    fs.readFile(`./upload/${req.params.filename}`,"utf8",function(err,data){
+      res.render('openfile', { files: filesDup,openFileName:req.params.filename,data:data});
+    });
+  });
+})
 module.exports = router;

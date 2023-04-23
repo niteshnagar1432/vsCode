@@ -146,3 +146,52 @@ html,body{
   background-color: transparent;
   color: aliceblue;
 }
+.main .right{
+  width: 75%;
+  height: 100%;
+  position: relative;
+}
+.main .right .nav{
+  width: 100%;
+  height: auto;
+  padding: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 3px;
+  background-color: rgb(50, 54, 54);
+  overflow-x: scroll;
+}
+.main .right .nav::-webkit-scrollbar{
+  display: none;
+}
+.main .right .nav .item{
+  width: auto;
+  min-width: 80px;
+  height: 35px;
+  background-color: rgb(74, 71, 71);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2px;
+  padding: 0px 4px;
+}
+.main .right .nav .item .name{
+  color: aliceblue;
+}
+a{
+  text-decoration: none;
+  color: rgb(138, 141, 145);
+}
+.main .right textarea{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: calc(100% - 3px - 35px);
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 20px !important;
+  color: rgb(138, 141, 145);
+  font-family: "consolas";
+}

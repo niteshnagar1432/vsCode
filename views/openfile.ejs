@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +8,6 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="../stylesheets/style.css">
 </head>
-
 <body>
     <div class="main">
         <div class="left">
@@ -29,9 +27,9 @@
                 <input id="folderName_i" name="folderName" type="text" placeholder="folder Name...">
             </form>
             <% files.forEach(function(file){ %>
-                <% if (file.isFolder==false) { %>
+                <% if (file.isFolder == false) { %>
                     <div class="file">
-                        <div class="name"><a href='upload/<%= file.fileName %>''><i class="ri-file-line"></i><%= file.fileName %></a></div>
+                        <div class="name"><a href="<%=file.fileName%>"><i class="ri-file-line"></i><%= file.fileName %></a></div>
                         <div class="close"><i class="ri-close-line"></i></div>
                     </div>
                 <% } else { %>
@@ -41,6 +39,17 @@
                     </div>
                 <% } %>
             <% }) %>
+        </div>
+        <div class="right">
+            <div class="nav">
+                <div class="item">
+                    <div class="name"><%= openFileName%></div>
+                    <div class="icon"><i class="ri-close-line"></i></div>
+                </div>
+            </div>
+            <textarea>
+                
+            </textarea>
         </div>
     </div>
     <script src="../javascripts/main.js"></script>
