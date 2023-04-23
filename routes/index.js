@@ -37,7 +37,7 @@ router.post('/folderCreate', function (req, res) {
     files.forEach(function(file){
       filesDup.push({fileName:file.name,isFolder:file.isDirectory()});
     });
-    res.render('vsCode', { file: filesDup });
+    res.render('vsCode', { files: filesDup });
   });
 });
 

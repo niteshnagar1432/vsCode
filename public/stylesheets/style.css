@@ -187,11 +187,12 @@ a{
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: calc(100% - 3px - 35px);
-  background-color: transparent;
+  height: calc(100% - 5px - 35px);
+  background-color: #4f5252a8;
   border: none;
   outline: none;
   padding: 20px !important;
   color: rgb(138, 141, 145);
   font-family: "consolas";
+  font-size: 22px;
 }
