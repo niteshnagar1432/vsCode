@@ -31,8 +31,8 @@
             <% files.forEach(function(file){ %>
                 <% if (file.isFolder==false) { %>
                     <div class="file">
-                        <div class="name"><a href='upload/<%= file.fileName %>''><i class="ri-file-line"></i><%= file.fileName %></a></div>
-                        <div class="close"><i class="ri-close-line"></i></div>
+                        <div class="name"><a href='upload/<%= file.fileName %>'><i class="ri-file-line"></i><%= file.fileName %></a></div>
+                        <div class="close"><a href="delete/<%= file.fileName %>"><i class="ri-close-line"></i></a></div>
                     </div>
                 <% } else { %>
                     <div class="folder">
