@@ -21,19 +21,19 @@ function closeCreation() {
     });
 }
 
-window.addEventListener('keydown', function(key) {
+window.addEventListener('keydown', function (key) {
     if (key.keyCode === 27) {
         document.querySelector('form input').value = "";
         closeCreation();
-    }else if(keyCode == 13){
+    } else if (keyCode == 13) {
         alert('fileCreated');
     }
 });
 
-refresh.addEventListener('click',function(){
+refresh.addEventListener('click', function () {
     window.location.reload();
 });
 
-document.querySelector('.left').addEventListener('click',function(dels){
+document.querySelector('.left').addEventListener('click', function (dels) {
     console.log(dels.target.id);
 });
